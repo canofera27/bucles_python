@@ -1,4 +1,4 @@
-# Bucles [Python]
+# Funciones [Python]
 # Ejercicios de práctica
 
 # Autor: Inove Coding School
@@ -7,24 +7,60 @@
 # IMPORTANTE: NO borrar los comentarios
 # que aparecen en verde con el hashtag "#"
 
-# Ejercicio de secuencias numéricas
+# Ejercicios con funciones y módulos
+import random
+lista_num=[]
+# --------------------------------
+# Aquí dentro definir la función contar
+cant_num = max(lista_num, key=lista_num.count)
 
-# Pedir por consola dos números que representen el principio y fin de una
-# secuencia numérica.
-# Realizar un bucle "for" que recorra esa secuencia armada con "range"
-# y calcule a sumatoria total de todos los números dentro de esa secuencia
-# Tener en cuenta que "range" no incluye el número de "fin" en su secuencia,
-# sino que va hasta el anterior
 
-inicio = int(input('Ingrese el primer número de la secuencia\n'))
-fin = int(input('Ingrese el último número de la secuencia\n'))
-sumatoria = 0  # Inicializo el contador en 0
+# Aquí copiar la función lista_aleatoria
+# ya elaborada
+def lista_aleatoria(inicio, fin, cantidad):
+    
+    numero = random.randrange(inicio, fin+1)
+    lista_num.append(numero)
+    return(numero)
 
-# for ... in range(....)
+# --------------------------------
 
-# Imprimir el valor de la sumatoria
-for i in range(inicio, fin + 1):
-    sumatoria = sumatoria + i
-print("El valor de la sumatoria es",sumatoria,"\n")
 
-print("terminamos!")
+if __name__ == '__main__':
+    print("Bienvenidos a otra clase de Inove con Python")
+    
+    inicio = 0
+    fin = 9
+    cantidad = 5
+
+    # Alumno: Crear la función "contar"
+
+    # Utilice la función "lista_aleatoria"  creado antes 
+    # para generar una lista de 5 números en
+    # un rango de 1 a 9 inclusive
+
+    # lista_numeros = lista_aleatoria(inicio, fin, cantidad)
+
+    # Generar una una nueva funcion que se llame "contar",
+    # que cuente la cantidad de veces que un elemento pasado
+    # por parámetro se repite en la lista también pasada por parámetro
+    
+    # Para saber cuantas veces se repiten el elemento pasado
+    # en la lista pueden usar el método nativo de list "count"
+
+    # Por ejemplo creo una lista de 5 elemtnos
+    
+    # Luego quiero averiguar cuantas veces se repite el numero 3
+    # cantidad_tres = contar(lista_numeros, 3)
+
+    # Luego de crear la función invocarla en este lugar:
+    # Averiguar cuantas veces se repite el numero 3
+
+    # cantidad_tres = contar(lista_numeros, 3)
+
+    # Imprimir en pantalla "cantidad_tres" que informa
+    # cuantas veces se repite el tres en la lista
+
+    # print(cantidad_tres)
+
+    print("terminamos")

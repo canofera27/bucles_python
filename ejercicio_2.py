@@ -1,4 +1,4 @@
-# Bucles [Python]
+# Funciones [Python]
 # Ejercicios de práctica
 
 # Autor: Inove Coding School
@@ -7,24 +7,44 @@
 # IMPORTANTE: NO borrar los comentarios
 # que aparecen en verde con el hashtag "#"
 
-# Ejemplos con bucles "for"
+# Ejercicios con funciones
 
-# Dado la siguiente lista de colores, utilizar "for"
-# para imprimir en pantalla todos los colores
-colores = ['rojo', 'naranja', 'verde', 'azul']
-for color in colores:
-    print(color)
-# Itere el "for" utilizando la lista como parámero
-# y utilizar como elemento del "for" cada color
-# for color ...
+def promedio(numeros):
+    print("Funcion promedio")
+    resultado = 0
+    cantidad_numeros = 0
+    sumatoria_numeros = 0
+    cantidad_numeros = len (numeros)
+    sumatoria_numeros = sum (numeros)
+    promedio    = sumatoria_numeros / cantidad_numeros
+    # La función promedio recibe como parámetro una
+    # lista de números. Con ella calcule el promedio como:
+    # promedio = sumatoria_numeros / cantidad_numeros
 
-# Itere el "for" utilizando el tamaño de la lista
-# como parámetro y utilizar el índice para acceder a
-# los elementos de la lista
-# for i ...
-colores_len = len(colores)
-                                # Ésta vendría a ser la segunda parte... Si corrés el código no te da error!
-for i in range(colores_len):
-    print(colores[i])
+    # Resuelva la sumatoria y la cantidad con las herramientas
+    # que desee, recomendamos usar las funciones disponibles
+    # de Python para ello:    
+    # sum --> obtener la sumatoria de números
+    # len --> obtener la cantidad de números
 
-print("terminamos!")
+    # La función debe retornar (return) el promedio calculado
+    # La función debe contemplar si se le pasa una lista vacia
+    # (es decir, de "0" elementos)
+
+    return resultado
+
+
+if __name__ == '__main__':
+    print("Bienvenidos a otra clase de Inove con Python")
+    
+    numeros = [2, 4, 6, 8, 10, 12]
+
+    # Alumno: Complete la función "promedio"
+
+    # Llamar a la función en este lugar y capturar el valor del retorno
+    resultado_promedio = promedio(numeros)
+
+    # Luego imprimir en pantalla el valor resultante:
+    # print(....)
+    print(resultado_promedio)
+    print("terminamos")

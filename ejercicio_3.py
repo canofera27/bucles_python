@@ -1,4 +1,4 @@
-# Bucles [Python]
+# Funciones [Python]
 # Ejercicios de práctica
 
 # Autor: Inove Coding School
@@ -7,17 +7,46 @@
 # IMPORTANTE: NO borrar los comentarios
 # que aparecen en verde con el hashtag "#"
 
-# Ejemplos con bucles "for"
+# Ejercicios con funciones
+def ordenar (numeros):
+    numeros.sort(reverse=True)
+    ### No me salía con el dichoso 'sort' así que usé el método de 'la burbuja' primero...###
+ #   for num in range(1,len(numeros)):
+ #       for n in range(len(numeros)-num):
+ #           if numeros[n] > numeros[n+1]:
+ #             x = numeros[n]
+ #               numeros[n] = numeros[n+1]
+ #               numeros[n+1] = x
+    return numeros
+
+# --------------------------------
+# Aquí dentro definir la función ordenar
+#def ordenar (numeros):
+
+
+# --------------------------------
+
+
+if __name__ == '__main__':
+    print("Bienvenidos a otra clase de Inove con Python")
     
-# Dado la siguiente lista de números, utilizar "for"
-# para recorrer toda la lista y realizar la sumatoria de todos los números
-# La sumatoria se deberá ir guardando en la variable "suma"
-numeros = [1, 5, -1, 6, 10, 2, -5]
-suma = 0   # Variable ya inicializada, la suma arranca en cero
+    numeros = [2, 4, 10, 8, 12, 6]
 
-for i in numeros:
-    suma += i
-    print(suma,"\n")
-# print("Seeeeeeee\n")
+    # Alumno: Crear la función "ordenar"
 
-print("terminamos!, el resultado final almacenado en suma debe ser 18")
+    # Generar una una nueva funcion que se llame "ordenar",
+    # que utilizaremos para odernar la lista de numeros.
+    # Debe recibir 1 parámetro que es la lista de números
+    # y retornar la nueva lista ordenada (muy simular a la función promedio)
+
+    # Dentro de la función puede ordenar la lista
+    # usando la funciones nativas de Python "sort"
+
+    # Luego de crear la función invocarla en este lugar:
+    lista_ordenada = ordenar(numeros)
+    # lista_ordenada = ordenar(numeros)
+    print(lista_ordenada)
+    # Imprimir en pantalla "lista_ordenada" que tendrá
+    # los valores retornado por la función ordenar:
+
+    print("terminamos")
